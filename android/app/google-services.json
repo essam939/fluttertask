@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "993344180389",
+    "firebase_url": "https://mytask-4bafa.firebaseio.com",
+    "project_id": "mytask-4bafa",
+    "storage_bucket": "mytask-4bafa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993344180389:android:5a066b700d318925127d4c",
+        "android_client_info": {
+          "package_name": "com.example.mytask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "993344180389-vif653ts8lf3hi2fdsp0ramf65lhelr9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8rc5Yl61BI3cUyW6FKUffA9UsqV6gA9M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "993344180389-vif653ts8lf3hi2fdsp0ramf65lhelr9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
