@@ -226,6 +226,7 @@ String  postImage="",myCommint="";
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
+                              width: double.infinity,
                               child: Image.file(userImage,fit: BoxFit.cover,),
                             ),
                           )
@@ -261,20 +262,18 @@ String  postImage="",myCommint="";
                             ),
                             Row(
                               children: <Widget>[
-                                Consumer(
-                                  builder: (context, snapshot,_) {
-                                    return RaisedButton(
+                                RaisedButton(
                                       onPressed: ()  {
                                         Navigator.of(context).pop();
                                         List<String> data=[comment.text];
-                                        storageReference.child(userId).getDownloadURL().then((res){
-                                          postImage=res;
-                                        });
+                                        mDatabaseReference.reference().child("user").child(userId).set(data);
+                                        storageReference.child(userId).putFile(userImage);
+                                        mDatabaseReference.reference().child("user").child(userId).once().then((res){myCommint= res.value[0].toString();});
+                                        storageReference.child(userId).getDownloadURL().then((res){postImage=res;});
+                                        setState(() {});
                                       },
                                       child: Text("نشر", style: TextStyle(color: Colors.white),),
-                                      color: MainProvider().secondColor,);
-                                  }
-                                ),
+                                      color: MainProvider().secondColor,),
                                 FlatButton(onPressed: () {
                                   Navigator.of(context).pop();
                                 },
